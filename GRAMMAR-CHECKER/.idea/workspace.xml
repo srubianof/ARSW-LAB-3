@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76e91e8a-bde3-4c8b-820a-6d7181cc14b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPRING_DIP_DI_DEMO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SPRING_DIP_DI_DEMO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/springdemo/EnglishSpellChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/springdemo/EnglishSpellChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/springdemo/GrammarChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/springdemo/GrammarChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/springdemo/SpanishSpellChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/springdemo/SpanishSpellChecker.java" afterDir="false" />
-    </list>
+    <list default="true" id="76e91e8a-bde3-4c8b-820a-6d7181cc14b7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,6 +98,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="127" key="#Project_Structure" timestamp="1598464129514">
@@ -119,22 +113,22 @@
       <screen x="0" y="23" width="2048" height="1045" />
     </state>
     <state x="252" y="407" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2048.1045@0.23.2048.1045" timestamp="1598464633201" />
-    <state width="982" height="286" key="GridCell.Tab.0.bottom" timestamp="1598465697242">
+    <state width="982" height="286" key="GridCell.Tab.0.bottom" timestamp="1598466957954">
       <screen x="0" y="23" width="2048" height="1045" />
     </state>
-    <state width="982" height="286" key="GridCell.Tab.0.bottom/0.23.2048.1045@0.23.2048.1045" timestamp="1598465697242" />
-    <state width="982" height="286" key="GridCell.Tab.0.center" timestamp="1598465697241">
+    <state width="982" height="286" key="GridCell.Tab.0.bottom/0.23.2048.1045@0.23.2048.1045" timestamp="1598466957954" />
+    <state width="982" height="286" key="GridCell.Tab.0.center" timestamp="1598466957953">
       <screen x="0" y="23" width="2048" height="1045" />
     </state>
-    <state width="982" height="286" key="GridCell.Tab.0.center/0.23.2048.1045@0.23.2048.1045" timestamp="1598465697241" />
-    <state width="982" height="286" key="GridCell.Tab.0.left" timestamp="1598465697241">
+    <state width="982" height="286" key="GridCell.Tab.0.center/0.23.2048.1045@0.23.2048.1045" timestamp="1598466957953" />
+    <state width="982" height="286" key="GridCell.Tab.0.left" timestamp="1598466957953">
       <screen x="0" y="23" width="2048" height="1045" />
     </state>
-    <state width="982" height="286" key="GridCell.Tab.0.left/0.23.2048.1045@0.23.2048.1045" timestamp="1598465697241" />
-    <state width="982" height="286" key="GridCell.Tab.0.right" timestamp="1598465697241">
+    <state width="982" height="286" key="GridCell.Tab.0.left/0.23.2048.1045@0.23.2048.1045" timestamp="1598466957953" />
+    <state width="982" height="286" key="GridCell.Tab.0.right" timestamp="1598466957954">
       <screen x="0" y="23" width="2048" height="1045" />
     </state>
-    <state width="982" height="286" key="GridCell.Tab.0.right/0.23.2048.1045@0.23.2048.1045" timestamp="1598465697241" />
+    <state width="982" height="286" key="GridCell.Tab.0.right/0.23.2048.1045@0.23.2048.1045" timestamp="1598466957954" />
     <state x="0" y="127" key="SettingsEditor" timestamp="1598464698653">
       <screen x="0" y="23" width="2048" height="1045" />
     </state>
