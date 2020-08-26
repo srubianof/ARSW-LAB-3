@@ -43,13 +43,29 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
 
     @Override
     public void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaException {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        Cinema cinema1 = this.cinemas.get(cinema);
+        List<CinemaFunction> functions = cinema1.getFunctions();
+        for (CinemaFunction function:functions){
+            if(function.getMovie().getName().equals(movieName) && function.getDate().equals(date)){
+                function.buyTicket(row, col);
+            }
+        }
+        //revisar si no hay funcion
     }
 
     @Override
     public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        List<CinemaFunction> cinemaFunctionsMatched = null;
+        Cinema cinema1 = this.cinemas.get(cinema);
+        List<CinemaFunction> cinemaFunctions = cinema1.getFunctions();
+        for (CinemaFunction cinemaFunction:cinemaFunctions){
+            if(cinemaFunction.getDate().equals(date)){
+                cinemaFunctionsMatched.add(cinemaFunction);
+            }
+        }
+        return cinemaFunctions;
     }
+
 
     @Override
     public void saveCinema(Cinema c) throws CinemaPersistenceException {
@@ -65,5 +81,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
     public Cinema getCinema(String name) throws CinemaPersistenceException {
         return cinemas.get(name);
     }
+
+
 
 }
