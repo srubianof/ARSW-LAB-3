@@ -24,18 +24,22 @@ public class Cinema {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public List<CinemaFunction> getFunctions() {
+
         return this.functions;
     }
 
     public void setSchedule(List<CinemaFunction> functions) {
+
         this.functions = functions;
     }
 }
