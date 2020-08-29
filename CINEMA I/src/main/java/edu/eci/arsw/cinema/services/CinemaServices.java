@@ -5,13 +5,16 @@
  */
 package edu.eci.arsw.cinema.services;
 
+import edu.eci.arsw.cinema.filter.CinemaFilterI;
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
+import edu.eci.arsw.cinema.model.Movie;
 import edu.eci.arsw.cinema.persistence.CinemaException;
 import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
 import edu.eci.arsw.cinema.persistence.CinemaPersitence;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +29,9 @@ public class CinemaServices {
     @Autowired
     @Qualifier("cinemaPersistence")
     CinemaPersitence cps;
+    @Autowired
+    @Qualifier("filterbySeats")
+    CinemaFilterI cf;
 
     public void addNewCinema(Cinema c) throws CinemaPersistenceException {
         cps.saveCinema(c);
@@ -50,7 +56,14 @@ public class CinemaServices {
     }
 
     public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
+
         return cps.getFunctionsbyCinemaAndDate(cinema, date);
+    }
+    public Map<String,Movie> filterByGenre(String genre) throws CinemaException {
+        return cf.filter(cps.getAllCinemas(),genre);
+    }
+    public Map<String,Movie> filterBySeats(String seats) throws CinemaException {
+        return cf.filter(cps.getAllCinemas(),seats);
     }
 
 

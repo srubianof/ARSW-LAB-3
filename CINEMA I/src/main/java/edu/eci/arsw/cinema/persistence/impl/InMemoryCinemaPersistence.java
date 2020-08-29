@@ -51,7 +51,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
 
     @Override
     public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
-        System.out.println(cinema+" "+date);
+//        System.out.println(cinema+" "+date);
         List<CinemaFunction> cinemaFunctionsMatched = new ArrayList<>();
         Cinema cinema1 = this.cinemas.get(cinema);
         List<CinemaFunction> cinemaFunctions = cinema1.getFunctions();
