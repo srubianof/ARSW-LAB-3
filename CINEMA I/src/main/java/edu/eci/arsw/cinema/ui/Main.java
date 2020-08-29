@@ -35,31 +35,53 @@ public class Main {
         Cinema c3 = new Cinema("cinemaZ", functions);
 
         cinemaServices.addNewCinema(c1);
-        cinemaServices.addNewCinema(c2);
-        cinemaServices.addNewCinema(c3);
+//        cinemaServices.addNewCinema(c2);
+//        cinemaServices.addNewCinema(c3);
         try {
-//            Set<Cinema> cinemas = cinemaServices.getAllCinemas();
-//            for (Cinema cinema : cinemas) {
+            Set<Cinema> cinemas = cinemaServices.getAllCinemas();
+            for (Cinema cinema : cinemas) {
 //                System.out.println(cinema.getName());
-//            }
-            System.out.println(cinemaServices.getCinemaByName("cinemaX").getName());
+            }
+//            System.out.println(cinemaServices.getCinemaByName("cinemaX").getName());
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        try {
-//            cinemaServices.buyTicket(0,0,"cinemaX","2018-12-18 15:30","SuperHeroes Movie");
-//            List<CinemaFunction> list = cinemaServices.getFunctionsbyCinemaAndDate("cinemaX","2018-12-18 15:30");
-//            for (CinemaFunction cinemaFunction:list
-//                 ) {
+        try {
+            cinemaServices.buyTicket(0,0,"cinemaX","2018-12-18 15:30","SuperHeroes Movie");
+            cinemaServices.buyTicket(0,1,"cinemaX","2018-12-18 15:30","SuperHeroes Movie");
+            cinemaServices.buyTicket(0,2,"cinemaX","2018-12-18 15:30","SuperHeroes Movie");
+            List<CinemaFunction> list = cinemaServices.getFunctionsbyCinemaAndDate("cinemaX","2018-12-18 15:30");
+            for (CinemaFunction cinemaFunction:list
+                 ) {
 //                System.out.println(cinemaFunction.getDate());
 //                System.out.println(cinemaFunction.getMovie().getName());
 //                System.out.println(cinemaFunction.getMovie().getGenre());
 //                System.out.println(cinemaFunction.getSeats());
-//
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+//        try {
+//            Map<String,Movie> moviesFiltered = cinemaServices.filterByGenre("Horror");
+//            for (String nombre: moviesFiltered.keySet()) {
+//                System.out.println(nombre);
+//                System.out.println(moviesFiltered.get(nombre).getName());
+//                System.out.println(moviesFiltered.get(nombre).getGenre());
 //            }
-//        } catch (Exception e) {
+//        } catch (CinemaException e) {
 //            e.printStackTrace();
 //        }
+        try {
+            Map<String,Movie> moviesFiltered = cinemaServices.filterBySeats("1");
+            for (String nombre: moviesFiltered.keySet()) {
+                System.out.println();
+                System.out.println(nombre);
+                System.out.println(moviesFiltered.get(nombre).getName());
+            }
+        } catch (CinemaException e) {
+            e.printStackTrace();
+        }
     }
 
 }
