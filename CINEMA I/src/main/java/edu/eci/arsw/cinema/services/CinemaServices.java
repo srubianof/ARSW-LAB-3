@@ -8,6 +8,7 @@ package edu.eci.arsw.cinema.services;
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
 import edu.eci.arsw.cinema.persistence.CinemaException;
+import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
 import edu.eci.arsw.cinema.persistence.CinemaPersitence;
 
 import java.util.List;
@@ -24,14 +25,14 @@ import org.springframework.stereotype.Service;
 public class CinemaServices {
     @Autowired
     @Qualifier("cinemaPersistence")
-    CinemaPersitence cps = null;
+    CinemaPersitence cps;
 
-    public void addNewCinema(Cinema c) {
-
+    public void addNewCinema(Cinema c) throws CinemaPersistenceException {
+        cps.saveCinema(c);
     }
 
-    public Set<Cinema> getAllCinemas() {
-        return null;
+    public Set<Cinema> getAllCinemas() throws CinemaException {
+        return cps.getAllCinemas();
     }
 
     /**
@@ -39,17 +40,17 @@ public class CinemaServices {
      * @return the cinema of the given name created by the given author
      * @throws CinemaException
      */
-    public Cinema getCinemaByName(String name) throws CinemaException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Cinema getCinemaByName(String name) throws CinemaPersistenceException {
+        return cps.getCinemaByName(name);
     }
 
 
-    public void buyTicket(int row, int col, String cinema, String date, String movieName) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaException {
+        cps.buyTicket(row, col, cinema, date, movieName);
     }
 
     public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return cps.getFunctionsbyCinemaAndDate(cinema, date);
     }
 
 
