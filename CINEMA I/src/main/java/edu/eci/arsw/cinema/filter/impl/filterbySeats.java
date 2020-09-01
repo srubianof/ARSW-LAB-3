@@ -1,9 +1,7 @@
 package edu.eci.arsw.cinema.filter.impl;
 
 import edu.eci.arsw.cinema.filter.CinemaFilterI;
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
-import edu.eci.arsw.cinema.model.Movie;
+import edu.eci.arsw.cinema.model.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 

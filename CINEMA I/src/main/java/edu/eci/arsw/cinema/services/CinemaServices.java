@@ -30,7 +30,8 @@ public class CinemaServices {
     @Qualifier("cinemaPersistence")
     CinemaPersitence cps;
     @Autowired
-    @Qualifier("filterbySeats")
+//    @Qualifier("filterbySeats")
+    @Qualifier("filterbyGenre")
     CinemaFilterI cf;
 
     public void addNewCinema(Cinema c) throws CinemaPersistenceException {
