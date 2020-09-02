@@ -25,31 +25,31 @@ public interface CinemaPersitence {
      * @throws CinemaException if the seat is occupied,
      *                         or any other low-level persistence error occurs.
      */
-    public void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaException;
+    void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaException;
 
     /**
      * @param cinema cinema's name
      * @param date   date
      * @return the list of the functions of the cinema in the given date
      */
-    public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date);
+    List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date);
 
     /**
      * @param cinema new cinema
      * @throws CinemaPersistenceException n if a cinema with the same name already exists
      */
-    public void saveCinema(Cinema cinema) throws CinemaPersistenceException;
+    void saveCinema(Cinema cinema) throws CinemaPersistenceException;
 
     /**
      * @param name name of the cinema
      * @return Cinema of the given name
      * @throws CinemaPersistenceException if there is no such cinema
      */
-    public Cinema getCinema(String name) throws CinemaPersistenceException;
+    Cinema getCinema(String name) throws CinemaPersistenceException;
 
-    public Cinema getCinemaByName(String name) throws CinemaPersistenceException;
+    Cinema getCinemaByName(String name) throws CinemaPersistenceException;
 
-    public Set<Cinema> getAllCinemas() throws CinemaException;
+    Set<Cinema> getAllCinemas() throws CinemaException;
 
 
 }

@@ -8,19 +8,19 @@ package edu.eci.arsw.cinema.model;
 import java.util.List;
 
 /**
- *
  * @author cristian
  */
 public class Cinema {
     private String name;
-    private List<CinemaFunction> functions; 
-    
-    
-    public Cinema(){}
-    
-    public Cinema(String name,List<CinemaFunction> functions){
-        this.name=name;
-        this.functions=functions;
+    private List<CinemaFunction> functions;
+
+
+    public Cinema() {
+    }
+
+    public Cinema(String name, List<CinemaFunction> functions) {
+        this.name = name;
+        this.functions = functions;
     }
 
     public String getName() {

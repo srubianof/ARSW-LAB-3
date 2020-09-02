@@ -1,4 +1,5 @@
 import static org.junit.Assert.*;
+
 import edu.eci.arsw.cinema.model.*;
 import edu.eci.arsw.cinema.services.CinemaServices;
 import org.junit.*;

@@ -79,7 +79,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
     }
 
     @Override
-    public Cinema getCinemaByName(String name){
+    public Cinema getCinemaByName(String name) {
         return cinemas.get(name);
     }
 
