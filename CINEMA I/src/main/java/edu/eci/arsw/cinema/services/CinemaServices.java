@@ -30,8 +30,7 @@ public class CinemaServices {
     @Qualifier("cinemaPersistence")
     CinemaPersitence cps;
     @Autowired
-//    @Qualifier("filterbySeats")
-    @Qualifier("filterbyGenre")
+    @Qualifier("filterbySeats")
     CinemaFilterI cf;
 
     public void addNewCinema(Cinema c) throws CinemaPersistenceException {
@@ -60,11 +59,13 @@ public class CinemaServices {
 
         return cps.getFunctionsbyCinemaAndDate(cinema, date);
     }
-    public Map<String,Movie> filterByGenre(String genre) throws CinemaException {
-        return cf.filter(cps.getAllCinemas(),genre);
+
+    public Map<String, Movie> filterByGenre(String genre) throws CinemaException {
+        return cf.filter(cps.getAllCinemas(), genre);
     }
-    public Map<String,Movie> filterBySeats(String seats) throws CinemaException {
-        return cf.filter(cps.getAllCinemas(),seats);
+
+    public Map<String, Movie> filterBySeats(String seats) throws CinemaException {
+        return cf.filter(cps.getAllCinemas(), seats);
     }
 
 
